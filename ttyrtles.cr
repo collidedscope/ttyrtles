@@ -17,6 +17,7 @@ class Ttyrtle
 
     change_direction if about_to_collide? || rand < 0.05
     travel
+    return if collided?
     render
 
     game.history << {@x, @y}
